@@ -1,20 +1,22 @@
-<form class="max-w-md mx-auto" (ngSubmit)="onSubmit()">
-  <mat-card-header class="w-full">
-    <h1 class="text-center">Login</h1>
-  </mat-card-header>
-  <mat-form-field class="w-full">
-    <mat-label>Email</mat-label>
-    <input matInput type="email" [(ngModel)]="email" placeholder="Enter your email" name="email" required>
-  </mat-form-field>
-  <mat-form-field class="w-full">
-    <mat-label>Password</mat-label>
-    <input matInput type="password" [(ngModel)]="password" placeholder="Enter your password" name="password" required>
-  </mat-form-field>
-  <button class="w-full" mat-raised-button color="primary" type="submit">Login</button>
-  <!-- <button mat-raised-button color="primary" type="submit">Register</button> -->
+<mat-card class="flex justify-center items-center h-screen">
+  <form class="bg-slate-400 shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 w-[500px]" (ngSubmit)="onSubmit()">
+    <mat-card-header class="w-full">
+      <h1 class="text-center">Login</h1>
+    </mat-card-header>
+    <mat-form-field class="w-full">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="email" placeholder="Enter your email" name="email" required>
+    </mat-form-field>
+    <mat-form-field class="w-full">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [(ngModel)]="password" placeholder="Enter your password" name="password" required>
+    </mat-form-field>
+    <button class="w-full" mat-raised-button color="primary" type="submit">Login</button>
+  
+    <div class="text-center justify-between pt-4">
+      <h3>You don't have an account? <a class=" text-red-400" [routerLink]="['/register']" >Register Here !</a></h3>
+    </div>
+  
+  </form>
+</mat-card>
 
-  <div class="text-center justify-between pt-4">
-    <h3>You don't have an account? <a class=" text-red-400" [routerLink]="['/register']" >Register Here !</a></h3>
-  </div>
-
-</form>
