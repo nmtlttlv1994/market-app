@@ -1,0 +1,62 @@
+<form
+  (ngSubmit)="onSubmit()"
+  action=""
+  class="w-[27rem] p-6 rounded-lg shadow-md"
+>
+  <div class="mb-4">
+    <mat-form-field class="w-full">
+      <mat-label class="text-gray-200">Title</mat-label>
+      <input
+        matInput
+        placeholder="Title..."
+        value=""
+        name="title"
+        [(ngModel)]="item.title"
+        [ngModelOptions]="{standalone:true}"
+        class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+  <div class="mb-4">
+    <mat-form-field class="w-full">
+      <mat-label class="text-gray-200">Description</mat-label>
+      <input
+        matInput
+        placeholder="Description..."
+        value=""
+        name="description"
+        [(ngModel)]="item.description"
+        [ngModelOptions]="{standalone:true}"
+        class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+  <div class="mb-4">
+      <mat-radio-group [(ngModel)]="item.itemType"
+      [ngModelOptions]="{standalone:true}"
+      aria-label="Category">
+        <mat-radio-button value="eyeplash">Eyeplash</mat-radio-button>
+        <mat-radio-button value="rourishingShampoo"
+          >Rourishing-Shampoo</mat-radio-button
+        >
+        <mat-radio-button value="nails">Nails</mat-radio-button>
+      </mat-radio-group>
+  </div>
+  <div class="mb-4">
+    <mat-form-field name="category" class="w-full">
+      <mat-label class="text-gray-200">Image</mat-label>
+      <input
+        matInput
+        placeholder="Image url..."
+        value=""
+        name="image"
+        [(ngModel)]="item.image"
+        [ngModelOptions]="{standalone:true}"
+        class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button type="submit" color="primary">Create</button>
+  </div>
+</form>
